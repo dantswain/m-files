@@ -1,0 +1,34 @@
+% width rgbcolor(3) scale(length) angle xycenter(2) fish
+/fish{ 
+  gsave 
+  locateandorient 
+  setrgbcolor 
+  1 exch scale
+  newpath
+  1 0 moveto
+  0 10 180
+    {
+      dup
+      cos
+      exch sin dup mul 0.5 mul
+      lineto
+    } for
+  1 0 moveto
+  0 10 180
+    {
+      dup
+      cos
+      exch sin dup mul -0.5 mul
+      lineto
+    } for
+  closepath
+  fill 
+  newpath
+  -1 0 moveto
+  -1.7 0.5 lineto
+  -1.7 -0.5 lineto
+  -1 0 lineto
+  closepath
+  fill
+ grestore } def
+

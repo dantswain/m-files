@@ -1,0 +1,26 @@
+% scale arrowhead? length 1 angle xycenter(2) edge
+/edge{
+        gsave
+        locateandorient
+        0 0 0 setrgbcolor
+        [5 5] 0 setdash
+        0 0 moveto
+        dup
+        0 lineto
+        stroke
+        exch
+        1 eq
+        {
+                newpath
+                        0 moveto
+                        dup -1 mul 0 rmoveto
+	                dup dup
+                        0.6 mul exch -1.6 mul exch rlineto
+                        dup dup                       
+                        -1.2 mul 0 exch rlineto
+                        dup
+                        0.6 mul exch 1.6 mul exch rlineto
+	        closepath fill 
+        } if
+        grestore
+} def

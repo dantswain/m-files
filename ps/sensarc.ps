@@ -1,0 +1,19 @@
+% blindangle rgbcolor(3) radius orientangle xycenter(2) sensarc
+/sensarc{
+	gsave
+	locateandorient
+        setrgbcolor
+        dup
+        180 exch 0.5 mul sub % gives 180 - 0.5*beta
+        dup
+        2 index add          % gives 180 + 0.5*beta
+	newpath
+        0 0 1 3 index 5 index arc
+	rotate
+	0 0 lineto
+	1 0 moveto
+	0 0 lineto	
+	closepath stroke
+	clear
+        grestore
+} def 

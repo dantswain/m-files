@@ -1,0 +1,19 @@
+% length rgbcolor(3) scale angle xycenter(2) arrow
+/arrow{
+	gsave
+	locateandorient
+	setrgbcolor
+	0 0 1 0 360 arc fill
+	newpath
+		0 0.2 moveto
+		dup 2 add 0.2 lineto
+		dup 2 add 0.8 lineto
+		dup 4 add 0 lineto
+		dup 2 add -0.8 lineto
+		2 add -0.2 lineto
+		0 -0.2 lineto
+	closepath fill 
+
+	grestore
+} def
+
